@@ -1,6 +1,4 @@
-$(document).ready(function() {
 
-	// console.log(); 
 	var heading = $('.about h1');
 	if(heading.length === 1){
 		$('.page-title').text(heading.text());
@@ -14,27 +12,6 @@ $(document).ready(function() {
 			}
 		});
 	});
-
-/*	$('.side-bar-wrap-btn').click(function(){
-		if($('.side-bar').hasClass('side-bar-show')){
-			console.log('сворачиваем');
-			$('.side-bar').removeClass('side-bar-show').hide('400',function(){
-				$('.side-bar').removeAttr('style');
-				$('.side-bar-wrap-btn').css('width', '23%');
-				$('.side-bar-wrap-btn').children().removeClass('fa-chevron-right');
-				$('.side-bar-wrap-btn').children().addClass('fa-chevron-left');
-			});
-		}else{
-			$('.side-bar').show('400', function() {
-			$('.side-bar').addClass('side-bar-show');
-			// console.log();
-			$('.side-bar-wrap-btn').children().removeClass('fa-chevron-left');
-			$('.side-bar-wrap-btn').children().addClass('fa-chevron-right');
-			$('.side-bar-wrap-btn').width($('.side-bar').width());
-			});
-		}
-		
-	});*/
 
 	function renderSlide(collection,rmC=false){
 		var slideData,titleSlideData,descSlideData,imgSlideData,bigSlide,titleSlide,descSlide;
@@ -97,5 +74,3 @@ $(document).ready(function() {
 	});
 
 	
-
-});
