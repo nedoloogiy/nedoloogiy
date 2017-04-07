@@ -75,6 +75,6 @@
 
 $('#formSend').on('click',function(e){
 	e.preventDefault();
-	console.log($('.wrap-input:input'));
+	console.log($('.wrap-input :input'));
 });
 	
