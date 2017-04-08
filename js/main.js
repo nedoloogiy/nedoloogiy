@@ -75,6 +75,26 @@
 
 $('#formSend').on('click',function(e){
 	e.preventDefault();
-	console.log($('.wrap-input :input'));
+	// console.log();
+	
+	$('.wrap-input :input').each(function(){
+		var fieldInput = $.trim($(this).val());
+		if( fieldInput === ''){
+			// $(this).val('поле пусто!');
+			$(this).next().show(500);
+		}
+
+		if(fieldInput.length < 2){
+			console.log('field'+ $(this).attr('id') +' short');
+		}
+
+	});
+
+	// проверка на соответствие email формата
+	var email = $('#email').val();
+	console.log(email);
+
+	console.log(/^\w+@\w+\.\w+$/i.test(email));
+
 });
 	
